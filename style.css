@@ -1,0 +1,83 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 200px 1fr;
+  grid-gap: 20px;
+  width: 100vw;
+  height: 100vh;
+  place-content: center;
+  margin-top: 100px;
+}
+
+.wrapper {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  text-align: center;
+}
+
+.boxSizing {
+  width: 50%;
+  height: 40px;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+form {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-gap: 20px;
+  place-items: center;
+}
+
+ul {
+  list-style: none;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  grid-gap: 10px;
+}
+
+li {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 50px;
+  grid-gap: 10px;
+}
+.redButton {
+  transform: translateX(-20px);
+  top: 5%;
+  right: 25%;
+  height: 38px;
+  border-radius: 20px;
+  background-color: red;
+}
+
+.todoBox {
+  border: 1px solid black;
+  padding: 10px;
+  width: 400px;
+}
+
+.btn {
+  padding: 5px 10px;
+  color: white;
+}
+
+.addButton {
+  height: 38px;
+  border-radius: 20px;
+  background-color: green;
+}
+
+.postionRelative {
+  position: relative;
+}
