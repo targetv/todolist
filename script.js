@@ -14,6 +14,7 @@ function createElm(tag, attobj) {
 // Input: todo data
 function todoCard(todo) {
   const liEl = document.createElement("li");
+  const infoDiv = document.createElement("div")
   const todoEl = createElm("p", {
     className: "todoBox boxSizing",
     innerText: `${todo.todoText} \n ${todo.completiondate}`,
@@ -63,6 +64,7 @@ function userTodosForm() {
   formEL.addEventListener("submit", function (event) {
     event.preventDefault();
     console.log(formEL.addtodo);
+    console.log(formEL.finishdate)
     const todoData = {
       todoText: formEL.addtodo.value,
       completiondate: formEL.finishdate.value,
@@ -71,7 +73,14 @@ function userTodosForm() {
     const section = document.querySelector("section");
     section.innerHTML = "";
     addUserDataToState();
-    formEL.reset();
+    // a small animation using the input
+    formEL.addtodo.value = "";
+    formEL.addtodo.placeholder = "success ✔";
+    formEL.finishdate.value = "";
+    function revertPlaceholder() {
+      formEL.addtodo.placeholder = "addtodo";
+    }
+    setInterval(revertPlaceholder, 5000)
   });
 }
 // Json Sever Fetch request
