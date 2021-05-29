@@ -80,7 +80,7 @@ function userTodosForm() {
     function revertPlaceholder() {
       formEL.addtodo.placeholder = "addtodo";
     }
-    setInterval(revertPlaceholder, 5000)
+    setTimeout(revertPlaceholder, 5000)
   });
 }
 // Json Sever Fetch request
